@@ -20,7 +20,7 @@ def main():
     parser.add_argument('--pretrained', type=str, default='./pretrain/saved/cmpnn_1024', help='pretrained model path')
 
     parser.add_argument('--epochs', type=int, default=5000, help='number of epochs')
-    parser.add_argument('--batch_size', type=int, default=128, help='batch size')
+    parser.add_argument('--batch_size', type=int, default=512, help='batch size')
     parser.add_argument('--lr', type=float, default=1e-4, help='learning rate')
     parser.add_argument('--decay', type=float, default=0.01, help='decay')
     parser.add_argument('--seed', type=int, default=0, help='seed')
