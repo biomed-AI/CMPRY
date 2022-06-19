@@ -13,16 +13,16 @@ def print_setting(args):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--gpu', type=int, default=5, help='the index of gpu device')
-    parser.add_argument('--test', type=int, default=0, help='0: 5-fold cross validation; 1: test on external')
+    parser.add_argument('--gpu', type=int, default=0, help='the index of gpu device')
+    parser.add_argument('--test', type=int, default=1, help='0: 5-fold cross validation; 1: test on external')
 
     parser.add_argument('--dataset', type=str, default='test', help='')
     parser.add_argument('--pretrained', type=str, default='./pretrain/saved/cmpnn_1024', help='pretrained model path')
 
     parser.add_argument('--epochs', type=int, default=5000, help='number of epochs')
-    parser.add_argument('--batch_size', type=int, default=512, help='batch size')
+    parser.add_argument('--batch_size', type=int, default=128, help='batch size')
     parser.add_argument('--lr', type=float, default=1e-4, help='learning rate')
-    parser.add_argument('--decay', type=float, default=0.01, help='decay')
+    parser.add_argument('--decay', type=float, default=0.02, help='decay')
     parser.add_argument('--seed', type=int, default=0, help='seed')
     parser.add_argument('--save', type=bool, default=False, help='save model')
 

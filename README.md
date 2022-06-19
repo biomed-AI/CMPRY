@@ -24,9 +24,9 @@ python test.py --dataset strict_test
 
 ```bash
 #train model and test 
-python run_gnn.py --test 1 --dataset test --batch_size 128
+python run_gnn.py --dataset test
 
 #or train model on strict_test set
-python run_gnn.py --test 1 --dataset strict_test
+python run_gnn.py --dataset strict_test
 ```
 
