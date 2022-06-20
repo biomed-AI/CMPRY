@@ -3,7 +3,7 @@
 ### Files in the folder
 
 + ``data``
-  + test: contain 860 training data and 182 test data
+  + test: contain 860 training data and 172 test data
   + strict_test: contain 700 training data and 32 test data
 + ``pretrain`` : codes to pretrain CMPNN and save pretrained model
 
