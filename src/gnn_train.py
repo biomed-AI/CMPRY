@@ -57,7 +57,7 @@ def eval(args, model, device, loader, save=0):
 def train_model(args, model, criterion, optimizer, train_loader, valid_loader, test_loader, device):
     best_valid = -100000000
 
-    early_stop, running_step = 10, 0
+    early_stop, running_step = 5, 0
     test_step = 100
     show_step = 100
     t = time()
@@ -92,14 +92,13 @@ def train_model(args, model, criterion, optimizer, train_loader, valid_loader, t
         if epoch % test_step == 1:
             if val_r2 >= best_valid:
                 best_valid = val_r2
-                best_valid_test = [test_r2, test_rmse]
                 running_step = 0
             else:
                 running_step += 1
             
-            # if running_step >= early_stop:
-            #     break
-    return best_valid_test[0], best_valid_test[1]
+            if running_step >= early_stop:
+                break
+    return test_r2, test_rmse
         
 def train(args, data):
     data = data[0]

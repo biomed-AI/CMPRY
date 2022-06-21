@@ -27,6 +27,12 @@ python test.py --dataset strict_test
 python run_gnn.py --dataset test
 
 #or train model on strict_test set
-python run_gnn.py --dataset strict_test
+python run_gnn.py --dataset strict_test --decay 0.02
+```
+
++ running environment
+
+```bash
+conda env create -f environment.yaml
 ```
 
