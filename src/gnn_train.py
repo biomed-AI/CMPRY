@@ -57,7 +57,7 @@ def eval(args, model, device, loader, save=0):
 def train_model(args, model, criterion, optimizer, train_loader, valid_loader, test_loader, device):
     best_valid = -100000000
 
-    early_stop, running_step = 5, 0
+    early_stop, running_step = 2, 0
     test_step = 100
     show_step = 100
     t = time()
