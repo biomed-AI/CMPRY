@@ -92,13 +92,14 @@ def train_model(args, model, criterion, optimizer, train_loader, valid_loader, t
         if epoch % test_step == 1:
             if val_r2 >= best_valid:
                 best_valid = val_r2
+                best_valid_test = [test_r2, test_rmse]
                 running_step = 0
             else:
                 running_step += 1
             
             if running_step >= early_stop:
                 break
-    return test_r2, test_rmse
+    return best_valid_test[0], best_valid_test[1]
         
 def train(args, data):
     data = data[0]
