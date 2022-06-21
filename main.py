@@ -1,8 +1,7 @@
 import argparse
-import yp_data_preprocess
 import torch
 import numpy as np
-from src import gnn_train as gnn_train
+from src import yp_data_preprocess, gnn_train
 
 def print_setting(args):
     print('\n===========================')
@@ -13,10 +12,8 @@ def print_setting(args):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--gpu', type=int, default=0, help='the index of gpu device')
+    parser.add_argument('--gpu', type=int, default=5, help='the index of gpu device')
     parser.add_argument('--test', type=int, default=1, help='0: 5-fold cross validation; 1: test on external')
-
-    parser.add_argument('--dataset', type=str, default='test', help='')
     parser.add_argument('--pretrained', type=str, default='./pretrain/saved/cmpnn_1024', help='pretrained model path')
 
     parser.add_argument('--epochs', type=int, default=5000, help='number of epochs')
@@ -29,7 +26,7 @@ def main():
     args = parser.parse_args()
     print_setting(args)
     np.random.seed(args.seed)
-    data = yp_data_preprocess.load_data(args)
+    data = yp_data_preprocess.load_data(args, 'test')
     if args.test == 0:
         gnn_train.train(args, data)
     else:

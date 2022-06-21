@@ -13,9 +13,9 @@ from src.features_mpn import bond_features, atom_features
 attribute_names = ['element', 'charge', 'aromatic', 'hcount']
 
 class YieldPredictionDataset(dgl.data.DGLDataset):
-    def __init__(self, args, dname):
+    def __init__(self, args, dataset, dname):
         self.args = args
-        self.dataset = args.dataset
+        self.dataset = dataset
         self.dname = dname
         self.path = 'data/' + self.dataset + '/cache/' + self.dname
         self.reactant_graphs = []
@@ -137,16 +137,16 @@ def mol_to_dgl(raw_graph):
     return graph
 
 
-def load_data(args):
+def load_data(args, dataset):
     data = []
-    if not os.path.exists('data/'+args.dataset+'/cache/'):
-        path = 'data/'+args.dataset+'/cache/'
+    if not os.path.exists('data/'+ dataset +'/cache/'):
+        path = 'data/'+ dataset +'/cache/'
         print('creating directory: %s' % path)
         os.mkdir(path)
     if args.test == 0:
-        data.append(YieldPredictionDataset(args, 'com'))
+        data.append(YieldPredictionDataset(args, dataset, 'com'))
     else:
-        data.append(YieldPredictionDataset(args, 'com'))
-        data.append(YieldPredictionDataset(args, 'external'))
+        data.append(YieldPredictionDataset(args, dataset, 'com'))
+        data.append(YieldPredictionDataset(args, dataset, 'external'))
     return data
 

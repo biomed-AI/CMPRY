@@ -3,7 +3,7 @@ import argparse
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-import yp_data_preprocess
+from src import yp_data_preprocess
 import pickle
 from src.GNN_graphpred import GNN_graphpred
 from dgl.dataloading import GraphDataLoader

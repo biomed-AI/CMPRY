@@ -24,15 +24,17 @@ python test.py --dataset strict_test
 
 ```bash
 #train model and test 
-python run_gnn.py --dataset test
+python main.py
 
 #or train model on strict_test set
-python run_gnn.py --dataset strict_test --decay 0.02
+python main_strict_test.py
 ```
 
 + running environment
 
 ```bash
 conda env create -f environment.yaml
+#or
+pip install -r requirements.txt
 ```
 
