@@ -26,7 +26,7 @@ python test.py --dataset strict_test
 #train model and test 
 python main.py
 
-#or train model on strict_test set
+#or train model and test on strict_test set
 python main_strict_test.py
 ```
 
