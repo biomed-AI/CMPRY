@@ -22,7 +22,7 @@ def main():
     parser.add_argument('--epochs', type=int, default=5000, help='number of epochs')
     parser.add_argument('--batch_size', type=int, default=128, help='batch size')
     parser.add_argument('--lr', type=float, default=1e-4, help='learning rate')
-    parser.add_argument('--decay', type=float, default=0.03, help='decay')
+    parser.add_argument('--decay', type=float, default=0.08, help='decay')
     parser.add_argument('--seed', type=int, default=0, help='seed')
     parser.add_argument('--save', type=bool, default=False, help='save model')
 
