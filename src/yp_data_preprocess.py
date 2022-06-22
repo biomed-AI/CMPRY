@@ -1,10 +1,7 @@
 import os
 import dgl
 import torch
-import pickle
-import pysmiles
 from dgl.data.utils import save_info, load_info
-import pysmiles
 import pandas as pd
 import numpy as np
 from rdkit import Chem

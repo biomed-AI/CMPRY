@@ -70,7 +70,6 @@ Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1629119114
 PyGSP==0.5.1
 pyparsing==2.4.7
 pyreadr==0.4.4
-pysmiles==1.0.1
 python-dateutil==2.8.1
 pytorch-crf==0.7.2
 pytz==2020.1
