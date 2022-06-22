@@ -25,16 +25,17 @@ parser.add_argument('--test', type=int, default=1, help='')
 parser.add_argument('--batch_size', type=int, default=128, help='batch size')
 
 args, _ = parser.parse_known_args()
-data = yp_data_preprocess.load_data(args)
-train_data, external_data = data[0], data[1]
 
 if args.dataset == 'test':
     model = load_model('net')
+    data = yp_data_preprocess.load_data(args, args.dataset)
 elif args.dataset == 'strict_test':
     model = load_model('net_for_strict_test')
+    data = yp_data_preprocess.load_data(args, args.dataset)
 if torch.cuda.is_available():
     model.cuda(args.gpu)
 
+train_data, external_data = data[0], data[1]
 device = torch.device("cuda:" + str(args.gpu)) if torch.cuda.is_available() else torch.device("cpu")
 
 print('test data size:', len(external_data))
