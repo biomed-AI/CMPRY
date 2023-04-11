@@ -1,16 +1,3 @@
-alabaster==0.7.12
-ase==3.20.1
-autopep8==1.6.0
-Babel==2.10.1
-backports.functools-lru-cache @ file:///home/conda/feedstock_root/build_artifacts/backports.functools_lru_cache_1618230623929/work
-certifi==2021.10.8
-chardet==3.0.4
-click==8.0.4
-cycler==0.10.0
-dataclasses==0.8
-decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1631346842025/work
-deepspeed==0.6.1
-Deprecated==1.2.11
 dgl-cu102==0.8.1
 dglgo==0.0.1
 docutils==0.17.1
@@ -28,16 +15,7 @@ idna==2.10
 imagesize==1.3.0
 importlib-metadata==4.8.3
 ipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1620912934572/work/dist/ipykernel-5.5.5-py3-none-any.whl
-ipython==5.8.0
-ipython-genutils==0.2.0
-isodate==0.6.0
-isort==5.10.1
-Jinja2==2.11.2
 joblib @ file:///home/conda/feedstock_root/build_artifacts/joblib_1601671685479/work
-jupyter-client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1633454794268/work
-jupyter-core @ file:///home/conda/feedstock_root/build_artifacts/jupyter_core_1631852698933/work
-kiwisolver==1.2.0
-littleutils==0.2.2
 llvmlite==0.34.0
 lmdb==1.3.0
 MarkupSafe==1.1.1
@@ -45,7 +23,6 @@ matplotlib==3.3.2
 mpi4py==3.1.3
 nest-asyncio @ file:///home/conda/feedstock_root/build_artifacts/nest-asyncio_1617163391303/work
 networkx==2.5
-ninja==1.10.2.3
 numba==0.51.2
 numpy @ file:///home/conda/feedstock_root/build_artifacts/numpy_1602429061603/work
 numpydoc==1.1.0
@@ -70,6 +47,7 @@ Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1629119114
 PyGSP==0.5.1
 pyparsing==2.4.7
 pyreadr==0.4.4
+pysmiles==1.0.1
 python-dateutil==2.8.1
 pytorch-crf==0.7.2
 pytz==2020.1
@@ -80,27 +58,11 @@ regex==2022.3.15
 requests==2.24.0
 ruamel.yaml==0.17.21
 ruamel.yaml.clib==0.2.6
-s-gd2==1.8
-sacremoses==0.0.49
 scikit-learn @ file:///home/conda/feedstock_root/build_artifacts/scikit-learn_1596546073158/work
 scipy @ file:///home/conda/feedstock_root/build_artifacts/scipy_1602862646378/work
 scprep==1.0.13
 simplegeneric==0.8.1
 six @ file:///home/conda/feedstock_root/build_artifacts/six_1590081179328/work
-smart-open==4.0.1
-snowballstemmer==2.2.0
-Sphinx==4.5.0
-sphinxcontrib-applehelp==1.0.2
-sphinxcontrib-devhelp==1.0.2
-sphinxcontrib-htmlhelp==2.0.0
-sphinxcontrib-jsmath==1.0.1
-sphinxcontrib-qthelp==1.0.3
-sphinxcontrib-serializinghtml==1.1.5
-tasklogger==1.0.0
-texttable==1.6.4
-threadpoolctl @ file:///tmp/tmp79xdzxkt/threadpoolctl-2.1.0-py3-none-any.whl
-tokenizers==0.11.6
-toml==0.10.2
 torch==1.10.2
 torch-cluster==1.5.7
 torch-geometric==1.6.1
@@ -111,7 +73,6 @@ torchvision==0.6.0a0+82fd1c8
 tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1610094701020/work
 tqdm==4.50.2
 traitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_1631041982274/work
-transformers==4.18.0
 typer==0.4.1
 typing-extensions==4.1.1
 urllib3==1.25.10
